@@ -1,0 +1,16 @@
+[
+  {
+    "education": {
+      "ui:widget": CheckboxesWidget,
+      title: 'Education',
+    },
+    gender: {
+      'ui:widget': CheckboxesWidget,
+      title: 'Gender',
+    },
+    'ui:submitButtonOptions': {
+      norender: true,
+    },
+    'ui:ObjectFieldTemplate': AccordionTemplate,
+  }
+]
