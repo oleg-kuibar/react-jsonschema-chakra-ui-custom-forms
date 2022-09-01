@@ -1,15 +1,23 @@
-import CheckboxesWidget from '../components/form-widgets/checkboxes.widget';
+import CheckboxesWidget from '../components/widgets/checkboxes.widget';
+import { RadioWithIcons } from '../components/widgets/radio-with-icons.widget';
 import { AccordionTemplate } from '../components/templates/accordion.template';
 import schema from '../documents/accordion.schema.json';
 
 const uiSchema = {
   education: {
     'ui:widget': CheckboxesWidget,
-    title: 'Education',
+    'ui:options': {
+      title: 'Education',
+      allOption: 'all',
+      spacing: 1,
+      columns: 1,
+    },
   },
   gender: {
-    'ui:widget': CheckboxesWidget,
-    title: 'Gender',
+    'ui:widget': RadioWithIcons,
+    'ui:options': {
+      title: 'Gender',
+    },
   },
   'ui:submitButtonOptions': {
     norender: true,

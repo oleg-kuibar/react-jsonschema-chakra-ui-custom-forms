@@ -16,12 +16,12 @@ export const AccordionTemplate = (props) => {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                {props.uiSchema[element.name].title}
+                {element.content.props.uiSchema['ui:options'].title}
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <h3>{props.uiSchema[element.name].description}</h3>
+          <h3>{element.content.props.uiSchema['ui:options'].description}</h3>
           <AccordionPanel pb={4}>{element.content}</AccordionPanel>
         </AccordionItem>
       ))}

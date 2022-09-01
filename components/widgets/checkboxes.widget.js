@@ -26,13 +26,6 @@ const CheckboxesWidget = (props) => {
     schema,
   } = props;
 
-  // allOption,
-  // options,
-  // onChange,
-  // defaultValue = [],
-  // columns = 1,
-  // spacing = 1,
-
   const {
     enumOptions,
     enumDisabled,
