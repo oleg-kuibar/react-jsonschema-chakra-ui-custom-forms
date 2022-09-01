@@ -11,8 +11,10 @@ import {
 export const AccordionTemplate = (props) => {
   return (
     <Accordion>
-      {props.properties.map((element) => (
-        <AccordionItem>
+      {props.properties.map((element, index) => (
+        <AccordionItem
+          key={`${index}_${element.content.props.uiSchema['ui:options'].title}`}
+        >
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
