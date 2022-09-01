@@ -14,6 +14,7 @@ The example contains a form with custom templates* and widgets* that allow devel
 
 ## Links
 
+- [Demo](https://oleg-kuibar.github.io/react-jsonschema-chakra-ui-custom-forms/)
 - [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-metadata-forms)
 - [React JSON Schema Forms Docs](https://react-jsonschema-form.readthedocs.io/en/latest/)
 - [Chakra UI Docs](https://chakra-ui.com/docs/)
