@@ -10,8 +10,6 @@ export const AccordionForm = (props) => {
     gender: 'gender_male',
   });
 
-  console.log(formState);
-
   return (
     <Form
       validator={validator}
@@ -19,7 +17,6 @@ export const AccordionForm = (props) => {
       uiSchema={uiSchema}
       formData={formState}
       onChange={console.log}
-      onBlur={console.log}
     />
   );
 };

@@ -1,6 +1,5 @@
 import { HStack, RadioGroup } from '@chakra-ui/react';
 import React from 'react';
-import { DefaultAllGender, SelectedAllGender } from '../icons.40';
 import RadioButton from '../RadioButton';
 
 export const RadioWithIcons = (props) => {
