@@ -1,18 +1,27 @@
 import { HStack, RadioGroup } from '@chakra-ui/react';
+import React from 'react';
 import { DefaultAllGender, SelectedAllGender } from '../icons.40';
 import RadioButton from '../RadioButton';
 
 export const RadioWithIcons = (props) => {
   return (
     <RadioGroup value={props.value} onChange={props.onChange}>
-      <HStack spacing="40px">
-        <RadioButton
-          title={props.uiSchema['ui:options'].title}
-          value={props.uiSchema['ui:options'].title}
-          icon={<DefaultAllGender />}
-          selectedIcon={<SelectedAllGender />}
-        />
-        {/* <RadioButton
+      {props.options.enumOptions.map((element, index) => {
+        const icon = React.createElement(props.options.icons[index]);
+        const selectedIcon = React.createElement(
+          props.options.selectedIcons[index]
+        );
+
+        return (
+          <HStack spacing="40px">
+            <RadioButton
+              key={`${index}_${element.value}`}
+              title={element.label}
+              value={element.value}
+              icon={icon}
+              selectedIcon={selectedIcon}
+            />
+            {/* <RadioButton
           title={availableAttributes.items[1].label}
           value={availableAttributes.items[1].value}
           icon={<DefaultMale />}
@@ -24,7 +33,9 @@ export const RadioWithIcons = (props) => {
           icon={<DefaultFemale />}
           selectedIcon={<SelectedFemale />}
         /> */}
-      </HStack>
+          </HStack>
+        );
+      })}
     </RadioGroup>
   );
 };
