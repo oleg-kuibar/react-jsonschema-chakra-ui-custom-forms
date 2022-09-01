@@ -14,3 +14,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+pre {
+  padding: 5px;
+  margin: 5px;
+}
+.string {
+  color: orange;
+}
+.number {
+  color: darkorange;
+}
+.boolean {
+  color: greenyellow;
+}
+.null {
+  color: magenta;
+}
+.key {
+  color: lightblue;
+}
