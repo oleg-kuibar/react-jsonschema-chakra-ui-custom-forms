@@ -10,8 +10,6 @@ export const AccordionForm = (props) => {
     gender: 'gender_male',
   });
 
-  console.log(formState);
-
   return (
     <Form
       validator={validator}
