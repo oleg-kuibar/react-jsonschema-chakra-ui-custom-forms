@@ -17,7 +17,6 @@ export const AccordionForm = (props) => {
       uiSchema={uiSchema}
       formData={formState}
       onChange={console.log}
-      onBlur={console.log}
     />
   );
 };
