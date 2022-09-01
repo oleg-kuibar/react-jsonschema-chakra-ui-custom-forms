@@ -15,7 +15,6 @@ export const uiSchema = {
     'ui:widget': CheckboxesWidget,
     'ui:options': {
       title: 'Education',
-      allOption: 'all',
       spacing: 1,
       columns: 1,
     },

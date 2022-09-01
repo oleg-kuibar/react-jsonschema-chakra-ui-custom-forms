@@ -1,4 +1,4 @@
-import { Box, Code } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import SchemaInfo from '../components/SchemaInfo';
 import { AccordionForm } from '../features/accordion-form';
