@@ -49,7 +49,6 @@ const CheckboxesWidget = (props) => {
       changedValue.length === enumOptions.length - 1 &&
       !changedValue.includes(enumOptions[0].value);
     // if all checkboxes are checked, add enumOptions[0].value to changedValue at 0 index
-    console.log(changedValue);
     if (allChecked) {
       return props.onChange([enumOptions[0].value, ...changedValue]);
     }

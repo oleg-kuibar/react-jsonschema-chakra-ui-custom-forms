@@ -1,22 +1,29 @@
 import Form from '@rjsf/chakra-ui';
 import { useAccordionForm } from './useAccordionForm';
 import validator from '@rjsf/validator-ajv6';
-import { useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { Box, Code, VStack } from '@chakra-ui/react';
 
 export const AccordionForm = (props) => {
   const { schema, uiSchema } = useAccordionForm();
-  const [formState, setFormStaet] = useState({
+  const [defaultFormValue] = useState({
     education: ['bachelor_education'],
     gender: 'gender_male',
   });
+  const [formValue, setFormValue] = useState(defaultFormValue);
 
   return (
-    <Form
-      validator={validator}
-      schema={schema}
-      uiSchema={uiSchema}
-      formData={formState}
-      onChange={console.log}
-    />
+    <>
+      <h3>Form Data:</h3>
+      <Code w="100%">{JSON.stringify(formValue)}</Code>
+      <Box h="5vh" />
+      <Form
+        validator={validator}
+        schema={schema}
+        uiSchema={uiSchema}
+        formData={formValue}
+        onChange={({ formData }) => setFormValue(formData)}
+      />
+    </>
   );
 };
