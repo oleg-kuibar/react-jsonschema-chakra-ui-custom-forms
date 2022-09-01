@@ -1,10 +1,11 @@
 import Form from '@rjsf/chakra-ui';
 import { useAccordionForm } from './useAccordionForm';
 import validator from '@rjsf/validator-ajv6';
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Box, Code, VStack } from '@chakra-ui/react';
+import { useState } from 'react';
+import { Box, Text } from '@chakra-ui/react';
+import { syntaxHighlight } from '../utils/SyntaxHighlight';
 
-export const AccordionForm = (props) => {
+export const AccordionForm = () => {
   const { schema, uiSchema } = useAccordionForm();
   const [defaultFormValue] = useState({
     education: ['bachelor_education'],
@@ -14,9 +15,16 @@ export const AccordionForm = (props) => {
 
   return (
     <>
-      <h3>Form Data:</h3>
-      <Code w="100%">{JSON.stringify(formValue)}</Code>
-      <Box h="5vh" />
+      <Box mb="5vh" bg="gray.700" color="white">
+        <Text bg="gray.900" p={2}>
+          Form Data:
+        </Text>
+        <pre
+          dangerouslySetInnerHTML={{
+            __html: syntaxHighlight(JSON.stringify(formValue, undefined, 3)),
+          }}
+        ></pre>
+      </Box>
       <Form
         validator={validator}
         schema={schema}
